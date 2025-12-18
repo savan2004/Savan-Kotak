@@ -91,5 +91,21 @@
 </head>
 <body>
     <div id="root"></div>
+      <script type="module">
+    // Dynamic app loader for ESM modules
+    (async () => {
+      const { App } = await import('./index.tsx');
+      const root = document.getElementById('root');
+      if (root && App) {
+        // Mount React app or execute default export
+        if (typeof App === 'function') {
+          App(root);
+        }
+      }
+    })().catch(err => {
+      console.error('Failed to load app:', err);
+      document.getElementById('root').innerHTML = '<h1 style="color: red; padding: 20px;">Failed to load application. Check console for errors.</h1>';
+    });
+  </script>
 </body>
 </html>
