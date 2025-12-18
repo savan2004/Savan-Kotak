@@ -21,4 +21,4 @@
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }
-}  /* DEPLOY: Force rebuild for Module 1-3 fixes */
+}
