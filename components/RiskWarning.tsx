@@ -14,29 +14,31 @@ const RiskWarning: React.FC<Props> = ({ onAccept }) => {
           <div className="bg-amber-500/20 p-3 rounded-full">
             <AlertTriangle className="text-amber-500 w-8 h-8" />
           </div>
-          <h2 className="text-2xl font-bold text-white">Market Risk Warning</h2>
+          <h2 className="text-2xl font-bold text-white">Institutional Risk Protocol</h2>
         </div>
         
         <div className="space-y-4 text-gray-300 mb-8 leading-relaxed">
-          <p>
-            Trading in equity derivatives (Options) carries significant risk and may lead to loss of entire capital.
+          <p className="text-sm">
+            Disclaimer : This report is generated with the help of AI using publicly available online data and may contain errors or outdated information.
+          </p>
+          <p className="text-sm">
+            It is for educational purposes only and does not constitute investment, tax, legal, or other professional advice or a recommendation to buy or sell any security.
           </p>
           <p className="font-semibold text-white">
             SEBI Warning: 9 out of 10 individual traders in equity futures and options segment incurred losses.
           </p>
-          <ul className="list-disc pl-5 space-y-2 text-sm text-gray-400">
-            <li>Signals generated are for educational purposes only.</li>
-            <li>Past performance is not indicative of future results.</li>
-            <li>Consult a certified financial advisor before making any investment.</li>
+          <ul className="list-disc pl-5 space-y-2 text-xs text-gray-400 italic">
+            <li>Always do your own research and consult qualified advisors before making financial decisions.</li>
+            <li>Neither the author nor the AI provider is responsible for any loss arising from use of this report.</li>
           </ul>
         </div>
 
         <button
           onClick={onAccept}
-          className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2 group"
+          className="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded-xl transition-all flex items-center justify-center gap-2 group uppercase tracking-widest"
         >
           <CheckCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
-          I Understand the Risks
+          Accept Terms & Conditions
         </button>
       </div>
     </div>

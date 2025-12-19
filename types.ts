@@ -96,10 +96,21 @@ export interface CompanyIntelligence {
   verdict: string;
 }
 
+export interface TopDownOpportunity {
+  company: string;
+  ticker: string;
+  sector: string;
+  rating: 'BUY' | 'ACCUMULATE' | 'HOLD' | 'REDUCE';
+  upside: string;
+  rationale: string;
+  institutionalScore: number; // 0-100
+}
+
 export interface ResearchOutput {
   text: string;
   sources: { title: string; uri: string }[];
   structuredData?: CompanyIntelligence;
+  topDownOpportunities?: TopDownOpportunity[];
   alphaIntel?: {
     entity: string;
     moatScore: number;
