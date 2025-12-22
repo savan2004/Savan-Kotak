@@ -20,8 +20,8 @@ import {
   Fingerprint, Briefcase, Award, MessageCircle, Printer, AlertTriangle, ExternalLink
 } from 'lucide-react';
 
-const ADMIN_EMAIL = 'savan2004@gmail.com';
-const ADMIN_PASSWORD = 'Sk@5252552';
+const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL || 'admin@example.com';
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || ''; // Must be set via environment
 
 const App: React.FC = () => {
   const [session, setSession] = useState<UserSession>({
